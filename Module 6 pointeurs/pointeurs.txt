@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+double calculMoyenne(int *ptr_note);
+
+int main()
+{
+ int note[10], i ,somme=0, numero;
+ double moyenne;
+
+cout<<"Entrez 10 notes\n";
+for(i=0;i<10;i++)
+{
+    cin>>note[i];
+}
+moyenne=calculMoyenne(&note[0]);
+cout<<"La moyenne est de : "<<moyenne<<endl;
+cout<<"Quelle note voulez vous recuperer?\n";
+cin>>numero;
+cout<<"La note que vous voulez est :"<<note[numero-1];
+
+}
+
+double calculMoyenne(int *ptr_note)
+{
+int i,somme=0;
+double moyenne=0;
+for(i=0;i<10;i++)
+{
+    somme=somme+*(ptr_note+i);
+}
+moyenne=somme/10.0;
+return moyenne;
+}

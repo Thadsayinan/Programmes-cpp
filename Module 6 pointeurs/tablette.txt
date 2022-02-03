@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstring>
+void test(char (*pt_tab)[24]);
+using namespace std;
+
+int main()
+{
+
+    char tab[10][24]={"tablette de chocolat","deux","trois","quatre","cinq","six","sept","huit","neuf","dix" };
+
+    test(tab);
+    return 0;
+}
+
+void test(char (*pt_tab)[24])
+{
+   bool trouve= false;
+   for(int i=0; i<10;i++)
+    {
+        if(strcmp(pt_tab[i],"tablette de chocolat")==0)
+            trouve=true;
+
+    }
+    if(trouve==true)
+            cout<<"tablette de chocolat se trouve bien dans la liste"<<endl;
+    else
+            cout<<"tablette de chocolat ne se trouve pas dans la liste"<<endl;
+}

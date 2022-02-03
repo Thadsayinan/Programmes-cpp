@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+void test (int *pt_tab, int taille, int *pt_min, int *pt_max)
+{
+
+}
+
+int main()
+{
+
+int taille=5, tab[taille]={1,2,3,4,5}, min, max;
+test(&tab[0], taille, &min, &max )
+cout<<"La valeur min est "<<min<<" et la valeur max est "<<max<endl;
+return 0;
+}
