@@ -8,41 +8,51 @@ struct elevesSnir{
     char nom[20];
     char prenom[20];
     int  anneeDeNaissance;
-    int  note[10];
+    double  note[10];
 };
 
 int main() {
-
-elevesSnir eleves[2];
+double moyenne1,moyenne2;
+elevesSnir eleve1,eleve2;
+int i=0;
 
 cout<<"Entrez les information svp !"<<endl;
-for(int i=0;i<2;i++)
-{
+
 cout<<"Entrez le nom d'etudiant 1."<<endl;
-cin>>eleves[i].nom;
-cout<<"Entrez le nom d'etudiant 2."<<endl;
-cin>>eleves[i].nom;
+cin>>eleve1.nom;
 cout<<"Entrez le prenom d'etudiant 1."<<endl;
-cin>>eleves[i].prenom;
-cout<<"Entrez le prenom d'etudiant 2."<<endl;
-cin>>eleves[i].prenom;
+cin>>eleve1.prenom;
 cout<<"Entrez l'annee de naissance d'etudiant 1."<<endl;
-cin>>eleves[i].anneeDeNaissance;
-cout<<"Entrez l'annee de naissance d'etudiant 2."<<endl;
-cin>>eleves[i].anneeDeNaissance;
+cin>>eleve1.anneeDeNaissance;
 cout<<"Entrez les 10 notes d'etudiant 1."<<endl;
-for(int j=0;j<10;j++)
+for(i=0;i<10;i++)
 {
-cin>>eleves[i].note[j];
+cin>>eleve1.note[i];
+
 }
+
+cout<<"Entrez le nom d'etudiant 2."<<endl;
+cin>>eleve2.nom;
+cout<<"Entrez le prenom d'etudiant 2."<<endl;
+cin>>eleve2.prenom;
+cout<<"Entrez l'annee de naissance d'etudiant 2."<<endl;
+cin>>eleve2.anneeDeNaissance;
 cout<<"Entrez les 10 notes d'etudiant 2."<<endl;
-for(int j=0;j<10;j++)
+for(i=0;i<10;i++)
 {
-cin>>eleves[i].note[j];
-}
+cin>>eleve2.note[i];
 
 }
 
+moyenne1+=eleve1.note[i]/10;
+moyenne2+=eleve2.note[i]/10;
+if(moyenne1>moyenne2)
+cout<<"l'eleve 1 a le meilleur moyenne"<<endl;
+
+else if(moyenne1<moyenne2)
+cout<<"l'eleve 1 a le meilleur moyenne"<<endl;
+else 
+cout<<"egal<<enl"<<endl;
 return 0;
 
 }
