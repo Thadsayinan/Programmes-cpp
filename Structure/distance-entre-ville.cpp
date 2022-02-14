@@ -61,10 +61,11 @@ for(int i=0;i<10;i++){
 
 if((villeDepart==ttrajet[i].villeD) & (villeArrive==ttrajet[i].villeA))
 {
+    
+
 
     distanceTotal=distanceTotal+ttrajet[i].distance;
 }
-
 
 
 
